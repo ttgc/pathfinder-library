@@ -58,11 +58,11 @@ PathFinder pf = new PathFinder(grid, start, destination);
 Point start = new Point(8,8);
 Point destination = new Point(1,1);
 Vector<Moves> moves;
-		try {
-			moves = pf.searchPath();
-		} catch (PathfindingException e) {
-			e.printStackTrace();
-		}
+try {
+	moves = pf.searchPath();
+} catch (PathfindingException e) {
+	e.printStackTrace();
+}
 ```
 First, create the object pathfinder with the map, the start position and the final position
 Then use `searchPath` to get a vector of moves that you'll have to do from start point to reach the final position
