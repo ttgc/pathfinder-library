@@ -54,9 +54,9 @@ then proceed as following :
 import java.awt.Point;
 import java.util.Vector;
 
-PathFinder pf = new PathFinder(grid, start, destination);
 Point start = new Point(8,8);
 Point destination = new Point(1,1);
+PathFinder pf = new PathFinder(grid, start, destination);
 Vector<Moves> moves;
 try {
 	moves = pf.searchPath();
