@@ -1,7 +1,7 @@
 # pathfinder-library
 A pathfinding library in java, using A* algorithm
 
-# What is supposed to do the library currently ?
+# What is the library supposed to do currently ?
 Pathfinder Library search a path from one point to an other point on a grid, avoiding obstacles like walls in a maze.
 The library use A* algorithm to search the best path from a position to an other position
 
