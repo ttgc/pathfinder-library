@@ -10,11 +10,24 @@ import pathfinderlib.basics.State;
 import pathfinderlib.exceptions.GeneratingMoveException;
 import pathfinderlib.exceptions.PathfindingException;
 
+/**
+ * PathFinder object allow to search the shortest path on a map between 2 points.
+ * The Map should be represented (or converted) as a 2D grid.
+ * Creating the object won't automatically search the right path, you should use method searchPath to do it
+ * @author thomas
+ * @version 1.0
+ */
 public class PathFinder {
 	private Matrix<State> graph;
 	private Node start;
 	private Node end;
 
+	/**
+	 * Create the PathFinder item and configure it for the search
+	 * @param laby a Matrix representing the map and its obstacles
+	 * @param start the start point
+	 * @param end the end point
+	 */
 	public PathFinder(Matrix<State> laby, Point start, Point end) {
 		// TODO Auto-generated constructor stub
 		this.graph = laby.submatrix(laby.getWidth(), laby.getHeight());
@@ -22,6 +35,11 @@ public class PathFinder {
 		this.end = new Node(end.x, end.y);
 	}
 	
+	/**
+	 * Search the shortest path between start and end point
+	 * @return The list of Moves to reach the end point
+	 * @throws PathfindingException raised when no path exists between the 2 points
+	 */
 	public Vector<Moves> searchPath() throws PathfindingException {
 		Matrix<Node> grid = new Matrix<>(graph.getWidth(), graph.getHeight());
 		for (int i=0;i<grid.getWidth();i++) {

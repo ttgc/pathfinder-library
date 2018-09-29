@@ -1,5 +1,10 @@
 package pathfinderlib.exceptions;
 
+/**
+ * Exception for path finding
+ * @author ttgc
+ * @version 1.0
+ */
 public class PathfindingException extends Exception {
 	private static final long serialVersionUID = 6073410189479371298L;
 

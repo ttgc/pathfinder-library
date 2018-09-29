@@ -1,5 +1,10 @@
 package pathfinderlib.exceptions;
 
+/**
+ * Exception for Moves generation
+ * @author ttgc
+ * @version 1.0
+ */
 public class GeneratingMoveException extends Exception {
 	private static final long serialVersionUID = 1L;
 
